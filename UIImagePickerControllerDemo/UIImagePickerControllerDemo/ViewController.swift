@@ -14,9 +14,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var imageView02: UIImageView!
     @IBOutlet weak var imageView03: UIImageView!
     @IBOutlet weak var imageView04: UIImageView!
+    
     var dic: Dictionary<String, String>!
+    
+    var myTapGesture = UITapGestureRecognizer()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.myTapGesture.addTarget(self, action: "tappedView")
+        self.imageView01.userInteractionEnabled = true
+        self.imageView01.addGestureRecognizer(self.myTapGesture)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -42,6 +48,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         println("用户取消")
+    }
+    
+    func tappedView() {
+        println("用户点击")
     }
 }
 
