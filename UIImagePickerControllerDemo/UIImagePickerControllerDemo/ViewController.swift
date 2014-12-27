@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var imageView01: UIImageView!
+    @IBOutlet weak var imageView02: UIImageView!
+    @IBOutlet weak var imageView03: UIImageView!
+    @IBOutlet weak var imageView04: UIImageView!
     var dic: Dictionary<String, String>!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +29,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         var imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        println(info)
+        var image: UIImage = info["UIImagePickerControllerOriginalImage"] as UIImage
+        self.imageView01.image = image
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
