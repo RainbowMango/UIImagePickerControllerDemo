@@ -87,29 +87,9 @@
                     <view key="view" contentMode="scaleToFill" id="B6h-Xn-jNy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-Jr-FgU">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whw-A8-ym0">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.86765558769999995" blue="0.69125505070000004" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="HWd-Jr-FgU" secondAttribute="trailing" id="572-rH-IMj"/>
-                            <constraint firstItem="HWd-Jr-FgU" firstAttribute="top" secondItem="B6h-Xn-jNy" secondAttribute="top" id="cev-mO-9Jv"/>
-                            <constraint firstAttribute="bottom" secondItem="HWd-Jr-FgU" secondAttribute="bottom" id="dVZ-Kz-KfQ"/>
-                            <constraint firstItem="HWd-Jr-FgU" firstAttribute="leading" secondItem="B6h-Xn-jNy" secondAttribute="leading" id="rV6-h0-CEj"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="imageView" destination="whw-A8-ym0" id="EAy-nT-snk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je1-cm-5fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

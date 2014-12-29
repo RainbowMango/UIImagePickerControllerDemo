@@ -8,16 +8,18 @@
 
 import UIKit
 
-class ShowImageViewController: UIViewController {
+class ShowImageViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var imageView: UIImageView!
+    var imageView: UIImageView!
+    var scrollView: UIScrollView!
     
     var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.imageView.image = self.image
+        
+        setScrollView()
+        setImageView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,15 +27,30 @@ class ShowImageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setImageView() {
+        self.imageView = UIImageView(frame: self.view.frame)
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.imageView.image = self.image
+        self.scrollView.addSubview(self.imageView)
     }
-    */
-
+    
+    func setScrollView() {
+        self.scrollView = UIScrollView(frame: self.view.bounds)
+        self.scrollView.contentSize = self.image.size
+        self.scrollView.delegate = self
+        self.scrollView.minimumZoomScale = 0.5
+        self.scrollView.maximumZoomScale = 5
+        self.view.addSubview(self.scrollView)
+    }
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        for subview: AnyObject in scrollView.subviews {
+            if subview.isKindOfClass(UIImageView) {
+                println(subview.size)
+                return subview as? UIView
+            }
+        }
+        
+        return nil
+    }
 }
