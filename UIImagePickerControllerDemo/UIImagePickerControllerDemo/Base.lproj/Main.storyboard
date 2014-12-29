@@ -87,9 +87,35 @@
                     <view key="view" contentMode="scaleToFill" id="B6h-Xn-jNy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="480" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-1h-NqJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="480" translatesAutoresizingMaskIntoConstraints="NO" id="PTf-LQ-Mwq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PTf-LQ-Mwq" firstAttribute="top" secondItem="dzF-1h-NqJ" secondAttribute="top" id="2h5-gY-xPW"/>
+                                    <constraint firstAttribute="trailing" secondItem="PTf-LQ-Mwq" secondAttribute="trailing" id="AQ2-9o-HqH"/>
+                                    <constraint firstAttribute="bottom" secondItem="PTf-LQ-Mwq" secondAttribute="bottom" id="iSi-OG-aBA"/>
+                                    <constraint firstItem="PTf-LQ-Mwq" firstAttribute="leading" secondItem="dzF-1h-NqJ" secondAttribute="leading" id="ihl-vH-ohm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dzF-1h-NqJ" secondAttribute="bottom" id="4eN-64-lg8"/>
+                            <constraint firstItem="dzF-1h-NqJ" firstAttribute="leading" secondItem="B6h-Xn-jNy" secondAttribute="leading" id="99X-xV-Ry2"/>
+                            <constraint firstItem="dzF-1h-NqJ" firstAttribute="top" secondItem="B6h-Xn-jNy" secondAttribute="top" id="ao1-BC-dvu"/>
+                            <constraint firstAttribute="trailing" secondItem="dzF-1h-NqJ" secondAttribute="trailing" id="h1f-Uh-ybn"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="PTf-LQ-Mwq" id="E4S-DL-dMx"/>
+                        <outlet property="scrollView" destination="dzF-1h-NqJ" id="Du7-0d-2nb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je1-cm-5fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
