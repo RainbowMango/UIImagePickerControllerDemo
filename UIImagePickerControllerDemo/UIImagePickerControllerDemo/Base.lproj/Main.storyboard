@@ -88,6 +88,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-GR-fzS">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="返回" id="cqZ-Up-tXa"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPj-ff-dvh">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="相册选取" id="ycs-mb-FnZ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8nw-MH-Bno"/>
+                                    <barButtonItem title="拍照选取" id="3jy-9W-8tT"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xlZ-Mq-AqW"/>
+                                    <barButtonItem title="删除" id="4UG-BP-ZAg"/>
+                                </items>
+                            </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="480" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-1h-NqJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
@@ -106,15 +124,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dzF-1h-NqJ" secondAttribute="bottom" id="4eN-64-lg8"/>
+                            <constraint firstItem="c8M-GR-fzS" firstAttribute="leading" secondItem="B6h-Xn-jNy" secondAttribute="leading" id="7ce-hu-3zP"/>
                             <constraint firstItem="dzF-1h-NqJ" firstAttribute="leading" secondItem="B6h-Xn-jNy" secondAttribute="leading" id="99X-xV-Ry2"/>
+                            <constraint firstAttribute="trailing" secondItem="QPj-ff-dvh" secondAttribute="trailing" id="TzX-GM-crI"/>
                             <constraint firstItem="dzF-1h-NqJ" firstAttribute="top" secondItem="B6h-Xn-jNy" secondAttribute="top" id="ao1-BC-dvu"/>
+                            <constraint firstAttribute="trailing" secondItem="c8M-GR-fzS" secondAttribute="trailing" id="bWd-36-qQI"/>
                             <constraint firstAttribute="trailing" secondItem="dzF-1h-NqJ" secondAttribute="trailing" id="h1f-Uh-ybn"/>
+                            <constraint firstItem="QPj-ff-dvh" firstAttribute="leading" secondItem="B6h-Xn-jNy" secondAttribute="leading" id="nNj-91-u82"/>
+                            <constraint firstItem="c8M-GR-fzS" firstAttribute="top" secondItem="B6h-Xn-jNy" secondAttribute="top" constant="20" id="qzv-Qc-H8e"/>
+                            <constraint firstAttribute="bottom" secondItem="QPj-ff-dvh" secondAttribute="bottom" constant="20" id="tR7-pO-MsU"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="bottomToolbar_" destination="QPj-ff-dvh" id="R8d-bN-3rH"/>
                         <outlet property="imageView" destination="PTf-LQ-Mwq" id="E4S-DL-dMx"/>
                         <outlet property="scrollView" destination="dzF-1h-NqJ" id="Du7-0d-2nb"/>
+                        <outlet property="topToolbar_" destination="c8M-GR-fzS" id="4Jo-LT-aVr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je1-cm-5fd" userLabel="First Responder" sceneMemberID="firstResponder"/>

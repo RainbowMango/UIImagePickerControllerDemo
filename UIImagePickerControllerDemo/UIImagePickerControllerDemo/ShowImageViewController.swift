@@ -12,13 +12,18 @@ class ShowImageViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topToolbar_: UIToolbar!
+    @IBOutlet weak var bottomToolbar_: UIToolbar!
     
     var image: UIImage!
+    var myTapGesture_ = UITapGestureRecognizer()
+    var isToolbarHidden_ = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = true
+        myTapGesture_.addTarget(self, action: "tappedView")
         setImageView()
         setScrollView()
     }
@@ -31,6 +36,8 @@ class ShowImageViewController: UIViewController, UIScrollViewDelegate {
     func setImageView() {
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.imageView.image = self.image
+        self.imageView.userInteractionEnabled = true
+        imageView.addGestureRecognizer(myTapGesture_)
     }
     
     func setScrollView() {
@@ -48,5 +55,18 @@ class ShowImageViewController: UIViewController, UIScrollViewDelegate {
         }
         
         return nil
+    }
+    
+    func tappedView() {
+        if isToolbarHidden_ {
+            self.view.bringSubviewToFront(topToolbar_)
+            self.view.bringSubviewToFront(bottomToolbar_)
+            isToolbarHidden_ = false
+        }
+        else {
+            self.view.sendSubviewToBack(topToolbar_)
+            self.view.sendSubviewToBack(bottomToolbar_)
+            isToolbarHidden_ = true
+        }
     }
 }
