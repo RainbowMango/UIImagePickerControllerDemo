@@ -52,6 +52,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func tappedView() {
         println("用户点击")
+        performSegueWithIdentifier("showImage", sender: self.view)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destinationView = segue.destinationViewController as ShowImageViewController
+        destinationView.setValue(self.imageView01.image, forKey: "image")
     }
 }
 

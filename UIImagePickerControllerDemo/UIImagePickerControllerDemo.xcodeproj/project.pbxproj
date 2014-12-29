@@ -14,6 +14,7 @@
 		9B8D81C21A4DAE8C00B58F53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8D81C11A4DAE8C00B58F53 /* Images.xcassets */; };
 		9B8D81C51A4DAE8C00B58F53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8D81C31A4DAE8C00B58F53 /* LaunchScreen.xib */; };
 		9B8D81D11A4DAE8C00B58F53 /* UIImagePickerControllerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D81D01A4DAE8C00B58F53 /* UIImagePickerControllerDemoTests.swift */; };
+		9BBB0E5E1A51752F004D1995 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB0E5D1A51752F004D1995 /* ShowImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		9B8D81CA1A4DAE8C00B58F53 /* UIImagePickerControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIImagePickerControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8D81CF1A4DAE8C00B58F53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B8D81D01A4DAE8C00B58F53 /* UIImagePickerControllerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerDemoTests.swift; sourceTree = "<group>"; };
+		9BBB0E5D1A51752F004D1995 /* ShowImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				9B8D81B71A4DAE8C00B58F53 /* AppDelegate.swift */,
 				9B8D81BC1A4DAE8C00B58F53 /* ViewController.swift */,
 				9B8D81BE1A4DAE8C00B58F53 /* Main.storyboard */,
+				9BBB0E5D1A51752F004D1995 /* ShowImageViewController.swift */,
 				9B8D81C11A4DAE8C00B58F53 /* Images.xcassets */,
 				9B8D81C31A4DAE8C00B58F53 /* LaunchScreen.xib */,
 				9B8D81B91A4DAE8C00B58F53 /* UIImagePickerControllerDemo.xcdatamodeld */,
@@ -218,6 +221,7 @@
 				9B8D81BD1A4DAE8C00B58F53 /* ViewController.swift in Sources */,
 				9B8D81BB1A4DAE8C00B58F53 /* UIImagePickerControllerDemo.xcdatamodeld in Sources */,
 				9B8D81B81A4DAE8C00B58F53 /* AppDelegate.swift in Sources */,
+				9BBB0E5E1A51752F004D1995 /* ShowImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				9B8D81D61A4DAE8C00B58F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B8D81D71A4DAE8C00B58F53 /* Build configuration list for PBXNativeTarget "UIImagePickerControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				9B8D81D91A4DAE8C00B58F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
