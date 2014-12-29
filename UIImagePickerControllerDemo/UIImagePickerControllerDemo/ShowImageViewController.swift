@@ -18,6 +18,7 @@ class ShowImageViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = true
         setImageView()
         setScrollView()
     }
@@ -28,19 +29,14 @@ class ShowImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setImageView() {
-        //self.imageView.frame = self.view.frame
-        //self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.imageView.image = self.image
-        //self.scrollView.addSubview(self.imageView)
     }
     
     func setScrollView() {
-        //self.scrollView.frame = self.view.frame
-        //self.scrollView.contentSize = self.view.frame.size
         self.scrollView.delegate = self
-        //self.scrollView.minimumZoomScale = 0.5
-        //self.scrollView.maximumZoomScale = 5
-        //self.view.addSubview(self.scrollView)
+        self.scrollView.minimumZoomScale = 0.5
+        self.scrollView.maximumZoomScale = 5
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
